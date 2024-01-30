@@ -59,5 +59,5 @@ recipesBook.addRecipe(
 const filteredByTimeRecipes = recipesBook.findByTime(60);
 console.log("Назви рецептів, які готуються швидше 60 хвилин -" + filteredByTimeRecipes?.map((r) => " " + r.title));
 
-const filteredByIngridientsRecipes = recipesBook.findByIngridients("картопля","морква");
-console.log("Назви рецептів за фільтром -" + filteredByIngridientsRecipes?.map((r) => " " + r.title));
+const filteredByIngridientsRecipes = recipesBook.findByIngridients("картопля", "морква");
+console.log(`Назви рецептів за фільтром - ${filteredByIngridientsRecipes.length !== 0 ? filteredByIngridientsRecipes?.map((r) => " " + r.title) : "нажаль таких немає"}`);
